@@ -77,7 +77,7 @@ if prompt := st.chat_input("Ask about your timetable or schedule..."):
     with st.chat_message("assistant"):
         with st.spinner("Thinking..."):
             response = client.chat.completions.create(
-                model="llama3.3-70b-versatile",
+                model="llama-3.1-8b-instant",
                 messages=[
                     {"role": "system", "content": SYSTEM_PROMPT},
                     *st.session_state.messages
